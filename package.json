@@ -1,0 +1,18 @@
+{
+  "name": "eyos-product-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.25.1",
+    "graphql": "^15.5.1",
+    "nodemon": "^2.0.7"
+  }
+}
