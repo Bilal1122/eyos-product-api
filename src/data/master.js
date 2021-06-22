@@ -61,8 +61,8 @@ export default [
     ]
   },
   {
-    "gtin": "8886008101336",
-    "productName": "Aqua Botol 330ml",	
+    "gtin": "8886008101337",
+    "productName": "Aqua Botol 500ml",
     "targetMarkets": ["ID"],
     "languages": [
       {
@@ -95,9 +95,9 @@ export default [
     "manufacturerName": "Danone",
     "brandName" : "Aqua",
     "subbrandName" : "",
-    "productPackSize" : "330 ml",
+    "productPackSize" : "500 ml",
     "productPackType" : "Bottle",
-    "metricValue" : 0.33,
+    "metricValue" : 0.50,
     "metricUnit" : "Litres",
     "isMultiPack" : false,
     "groupingSets": [
@@ -107,8 +107,8 @@ export default [
         {
           "productType" : "Market Small Bottle (0-500ml)",
           "marketSegment" : "Market SPS",
-          "volumeInLiter" : "0.33L",
-          "package": "Small Bottle",
+          "volumeInLiter" : "0.50L",
+          "package": "Medium Bottle",
           "organic":  "Sparkling Water"
         }
       }
