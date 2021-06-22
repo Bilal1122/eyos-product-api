@@ -50,7 +50,79 @@ const typeDefs = gql`
   }
 
   type Query {
-    products: [Product]
+    products: [Product],
+    productsList: [Product]
+  }
+
+  input CreateInput {
+    storeId: Int
+    partnerId: Int
+  }
+
+  # tokopedia
+
+  type tokopediaDimension {
+    height: Int
+    width: Int
+    length: Int
+  }
+
+  type tokopediaPictures {
+    file_path: String
+  }
+
+  type tokopediaWholesale {
+    min_qty: Int
+    price: Int
+  }
+
+  type tokopediaPreorder {
+    is_active: Boolean
+    duration: Int
+    time_unit: String
+  }
+
+  type tokopediaVideos {
+    source: String
+    url: String
+  }
+
+  type tokopediaObj {
+    name: String
+    condition: String
+    description: String
+    sku: String
+    price: Int
+    status: String
+    stock: Int
+    min_order: Int
+    category_id: Int
+    price_currency: String
+    weight: Int
+    dimension: tokopediaDimension
+    custom_product_logistics: [Int]
+    annotations: [Int]
+    pictures: [tokopediaPictures]
+    wholesale: [tokopediaWholesale]
+    preorder: tokopediaPreorder
+    videos: [tokopediaVideos]
+  }
+
+  type PartnerResponseData {
+    success: Boolean
+    message: String
+    storeId: Int
+    partnerId: Int
+    addedProductCount: Int
+    products: [tokopediaObj]
+  }
+
+  type PartnerResponse {
+    data: PartnerResponseData
+  }
+
+  type Mutation {
+    createProducts(input: CreateInput): PartnerResponse
   }
 `;
 
