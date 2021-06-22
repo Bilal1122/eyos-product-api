@@ -2,8 +2,9 @@ import { gql } from 'apollo-server';
 
 const typeDefs = gql`
   type Product {
-    name: String
-    catgeory: String
+    gtin: String
+    productName: String
+    targetMarkets: [String]
   }
 
   type Query {
