@@ -1,16 +1,6 @@
 import { ApolloServer, gql } from 'apollo-server';
 import typeDefs from './graphqlTypes.js';
-
-const products = [
-  {
-    name: 'Coke 500ml',
-    catgeory: 'Coke',
-  },
-  {
-    name: 'Dasani',
-    catgeory: 'Water',
-  },
-];
+import products from './data/master.js';
 
 const resolvers = {
   Query: {
